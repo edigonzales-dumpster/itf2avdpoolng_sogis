@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/media/jai_core/1.1.3/jai_core-1.1.3.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/ch/interlis/ili2c/4.4.8/ili2c-4.4.8.jar"/>
+  <classpathentry kind="var" path="M2_REPO/ch/interlis/iox-ili/1.7.1/iox-ili-1.7.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/ch/interlis/iox-api/1.0.2/iox-api-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-main/8.7/gt-main-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-api/8.7/gt-api-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/vividsolutions/jts/1.12/jts-1.12.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-referencing/8.7/gt-referencing-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/java3d/vecmath/1.3.2/vecmath-1.3.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-metadata/8.7/gt-metadata-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-opengis/8.7/gt-opengis-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/dev/jsr-275/jsr-275/1.0-beta-2/jsr-275-1.0-beta-2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jgridshift/jgridshift/1.0/jgridshift-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jdom/jdom/1.0/jdom-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-epsg-hsql/8.7/gt-epsg-hsql-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/hsqldb/hsqldb/1.8.0.7/hsqldb-1.8.0.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/jdbc/gt-jdbc-postgis/8.7/gt-jdbc-postgis-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/postgresql/postgresql/8.4-701.jdbc3/postgresql-8.4-701.jdbc3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-jdbc/8.7/gt-jdbc-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-data/8.7/gt-data-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-dbcp/commons-dbcp/1.3/commons-dbcp-1.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-shapefile/8.7/gt-shapefile-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/geotools/gt-cql/8.7/gt-cql-8.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/xerial/sqlite-jdbc/3.6.20/sqlite-jdbc-3.6.20.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/tmatesoft/svnkit/svnkit/1.7.4-v1/svnkit-1.7.4-v1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/de/regnis/q/sequence/sequence-library/1.0.2/sequence-library-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/tmatesoft/sqljet/sqljet/1.1.1/sqljet-1.1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/trilead/trilead-ssh2/1.0.0-build215/trilead-ssh2-1.0.0-build215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+</classpath>
