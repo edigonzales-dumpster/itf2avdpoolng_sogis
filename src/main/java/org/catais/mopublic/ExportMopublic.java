@@ -47,16 +47,16 @@ public class ExportMopublic {
 					String[] topics = {"Control_points", "Land_cover", "Single_objects", "Heights", "Local_names", "Ownership", "Pipelines", "Territorial_boundaries", "Building_addresses"};
 
     				MOpublic mopublic = new MOpublic(params);
-					mopublic.write(f.substring(0, 4), "d", topics, "sqlite", "LV03");
+//					mopublic.write(f.substring(0, 4), "d", topics, "sqlite", "LV03");
 
-    				mopublic = new MOpublic(params);
+//    				mopublic = new MOpublic(params);
 					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV03");
 
-    				mopublic = new MOpublic(params);
-					mopublic.write(f.substring(0, 4), "e", topics, "shp", "LV03");
-
-    				mopublic = new MOpublic(params);
-					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV95");
+//    				mopublic = new MOpublic(params);
+//					mopublic.write(f.substring(0, 4), "e", topics, "shp", "LV03");
+//
+//    				mopublic = new MOpublic(params);
+//					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV95");
 		
     				logger.info("MOpublic created: " + f);
 				} catch (ClassNotFoundException e) {
@@ -74,7 +74,7 @@ public class ExportMopublic {
 	
 					String[] topics = {"Control_points", "Land_cover", "Single_objects", "Heights", "Local_names", "Ownership", "Pipelines", "Territorial_boundaries", "Building_addresses"};
 					MOpublic mopublic = new MOpublic(params);
-					mopublic.write("kanton", "d", topics, "shp", "LV03");
+//					mopublic.write("kanton", "d", topics, "shp", "LV03");
 					
 					logger.info("MOpublic Kanton created.");
 				} catch (ClassNotFoundException e) {

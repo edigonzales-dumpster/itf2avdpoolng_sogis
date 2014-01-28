@@ -88,7 +88,7 @@ public class MOpublic {
 		dbparams.put("host", this.host);        
 		dbparams.put("port", this.port);  
 		dbparams.put("database", this.dbname); 
-		dbparams.put("schema", "av_mopublic_meta");
+		dbparams.put("schema", "av_mopublic");
 		dbparams.put("user", this.user);        
 		dbparams.put("passwd", this.pwd); 
 		dbparams.put(PostgisNGDataStoreFactory.VALIDATECONN, true );
@@ -193,13 +193,16 @@ public class MOpublic {
 	private void read(String gemeinde, String language, String topic, String table) {
 		// Tabellen-Id
 		double id = this.getClassIdFromClassName(topic, table);
+//		logger.debug(id);
 
 		// HashMap mit englischen Namen als Key und mit der gewuenschten Sprache als Value.
 		HashMap <String, String>lookUp = this.getAttributeNames(id, language);
+//		logger.debug(lookUp);
 
 		// Fuer gewuenschte Tabelle die passende SQL-Query.
 		String sql = this.getSqlQueryFromClassId(id);
-		
+//		logger.debug(sql);
+				
 		if (sql != null) {
 
 			try {
@@ -234,9 +237,8 @@ public class MOpublic {
 				VirtualTable vt = new VirtualTable(vtName, sql);
 	
 				((JDBCDataStore) datastore).addVirtualTable(vt);
-	
+					
 				FeatureSource source = datastore.getFeatureSource(vtName);
-				//			System.out.println(source.getSchema());
 	
 				// Nun ja: Das BfS-Nr.-Attribut heisst je nach Sprache anders. Bei den Hoehen
 				// muss wohl via Geometrie gefiltert werden (Herrje, warum hat man hier keine
@@ -301,6 +303,7 @@ public class MOpublic {
 				logger.debug("Feature count: " + fc.size());
 	
 			} catch (IOException e) {
+				e.printStackTrace();
 				logger.error("IOException");
 				logger.error(e.getMessage());
 			} catch (NullPointerException e) {

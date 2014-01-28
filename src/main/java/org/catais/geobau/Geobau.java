@@ -143,7 +143,7 @@ public class Geobau {
         params.put("host", this.host);        
         params.put("port", this.port);  
         params.put("database", this.dbname); 
-        params.put("schema", "av_dxfgeobau_meta");
+        params.put("schema", "av_dxfgeobau");
         params.put("user", this.user);        
         params.put("passwd", this.pwd); 
         params.put(PostgisNGDataStoreFactory.VALIDATECONN, true );

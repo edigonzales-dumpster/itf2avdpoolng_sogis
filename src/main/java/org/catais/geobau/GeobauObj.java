@@ -41,7 +41,6 @@ public class GeobauObj {
 		FileOutputStream dxffile = new FileOutputStream(outputFileName);	
 		logger.info(geobauDir + File.separator +  fosnr + ".dxf");
 		fw = new BufferedWriter(new OutputStreamWriter(dxffile, "ISO-8859-1"));	
-		
 	}
 	
 	public void zip() throws FileNotFoundException, IOException {
