@@ -83,7 +83,11 @@ public class ImportData {
     			return name.toLowerCase().endsWith(".itf"); 
     		}
     	});
-    	logger.debug("Count of itf files: " + itfFileList.length);
+    	try {
+        	logger.debug("Count of itf files: " + itfFileList.length);
+    	} catch (Exception e) {
+    		logger.debug("No files found.");
+    	}
 
     	if (itfFileList != null) {
     		for(String f : itfFileList) {

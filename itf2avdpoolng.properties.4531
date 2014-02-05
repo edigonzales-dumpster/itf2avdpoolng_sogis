@@ -38,8 +38,8 @@ dbpwd = av_import
 import = true 
 importModelName = DM01AVSO24
 #importModelName = DM08BaulinienSO
-importSourceDir = /home/stefan/tmp/av/
-importDestinationDir = /tmp/
+importSourceDir = /home/bjsvwzie/tmp/av/
+importDestinationDir = /sogis_nas/daten_aktuell/kva/itf_so/
 deletefiles = false
 fusion = false
 
@@ -62,9 +62,9 @@ renumberTid = true
 # in das Bundesmodell konvertiert. Es muss der Modellname 
 # werden (ili2chModelName) und das Zielverzeichnis (ili2chDir)
 # angegeben werden.
-#ili2ch = true
-#ili2chModelName = DM01AVCH24D
-ili2chDir = /tmp/
+ili2ch = true
+ili2chModelName = DM01AVCH24D
+ili2chDir = /sogis_nas/daten_aktuell/kva/itf_ch/
 
 # DXF-Geobau:
 # Mit geobau = true werden DXF-Geobau-Datein für die Gemeinden der zu
@@ -73,8 +73,8 @@ ili2chDir = /tmp/
 # meistens nur sinnvoll wenn man zugleich importiert (weil sonst nicht
 # aktuelle DXF-Daten erzeugt werden). Ebenfalls muss ein Ziel-
 # verzeichnis (geobauDir) angebeben werden.
-#geobau = true
-geobauDir = /tmp/
+geobau = true
+geobauDir = /sogis_nas/daten_aktuell/kva/dxf_geobau/
 
 # MOpublic:
 # Mit mopublic = true werden die verschieden MOpublic-Formater erzeugt.
@@ -86,12 +86,12 @@ geobauDir = /tmp/
 # kopiert (../shp/lv03/d/..). Die Unterverzeichnisse müssen auf dem
 # Filesystem vorhanden sein.
 # Auch hier werden die Daten aus der Datenbank erzeugt.
-#mopublic = true
-mopublicBaseDir = /tmp/mopublic/
+mopublic = true
+mopublicBaseDir = /sogis_nas/daten_aktuell/kva/mopublic/
 
 # AV-WMS:
 # Mit avwms = true werden die AV-WMS-Tabellen neu abgefüllt.
-#avwms = true
+avwms = true
 
 
 # NICHT IN GEBRAUCH:
