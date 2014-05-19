@@ -287,16 +287,12 @@ public class App
 		} catch (IOException ioe) {
 			logger.fatal(ioe.getMessage());
 			ioe.printStackTrace();
-		} catch (ArrayIndexOutOfBoundsException aioobe) {
-			logger.fatal(aioobe.getMessage());
-			aioobe.printStackTrace();
 		} finally {
 			// Stop logging
         	logger.info("End: "+ new Date());
 		}
 		
-		
-
+    	logger.info("Import beendet mit: " + errorFileList.size() + " Fehler.");
 
         
 //        // Get all the actions we have to do from the properties file
