@@ -483,9 +483,9 @@ public class IliReader {
         					if (value != null) {
         						PrecisionDecimal maxOverlaps = ((AreaType) type).getMaxOverlap();
             					if (maxOverlaps == null) {
-                					featBuilder.set(attrName.toLowerCase(), Iox2wkt.polyline2jts(value, 0.02, arcHelperStore, tag, (Integer) this.additionalAttributes.get("gem_bfs"), (Integer) this.additionalAttributes.get("los")));
+            						 featBuilder.set(attrName.toLowerCase(), Iox2wkt.polyline2jts(value, 0.02));
             					} else {
-                					featBuilder.set(attrName.toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue(), arcHelperStore, tag, (Integer) this.additionalAttributes.get("gem_bfs"), (Integer) this.additionalAttributes.get("los")));
+            						featBuilder.set(attrName.toLowerCase(), Iox2wkt.polyline2jts(value, maxOverlaps.doubleValue()));
             					}
         					}                                                               
         				} else {       					
