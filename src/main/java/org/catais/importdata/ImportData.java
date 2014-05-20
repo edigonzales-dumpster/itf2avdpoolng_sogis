@@ -135,6 +135,10 @@ public class ImportData {
         				File hinweiseFile = new File(tempDir, "Hinweise.pdf");
         				IOUtils.copy(isHinweise, hinweiseFile);
 
+        				InputStream isMusterplan =  ImportData.class.getResourceAsStream("Musterplan.pdf");
+        				File musterplanFile = new File(tempDir, "Musterplan.pdf");
+        				IOUtils.copy(isMusterplan, musterplanFile);
+
         				String outZipFileName = importDestinationDir.trim() + dir.separator + f.substring(0, 6) + ".zip";
         				FileOutputStream zipfile = new FileOutputStream(outZipFileName);
         				ZipOutputStream zipOutputStream = new ZipOutputStream(zipfile);
@@ -153,7 +157,12 @@ public class ImportData {
         				ZipEntry hinweiseZipEntry = new ZipEntry(hinweiseFile.getName());
         				zipOutputStream.putNextEntry(hinweiseZipEntry);
         				new FileInputStream(hinweiseFile).getChannel().transferTo(0, hinweiseFile.length(), Channels.newChannel(zipOutputStream));
-        				
+
+        				// Musterplan
+        				ZipEntry musterplanZipEntry = new ZipEntry(musterplanFile.getName());
+        				zipOutputStream.putNextEntry(musterplanZipEntry);
+        				new FileInputStream(musterplanFile).getChannel().transferTo(0, musterplanFile.length(), Channels.newChannel(zipOutputStream));
+
         				zipOutputStream.closeEntry();
         				zipOutputStream.close();
         				

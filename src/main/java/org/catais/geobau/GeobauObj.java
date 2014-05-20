@@ -58,6 +58,11 @@ public class GeobauObj {
 		InputStream isHinweise =  GeobauObj.class.getResourceAsStream("Hinweise.pdf");
 		File hinweiseFile = new File(tempDir, "Hinweise.pdf");
 		IOUtils.copy(isHinweise, hinweiseFile);
+		
+		InputStream isMusterplan =  GeobauObj.class.getResourceAsStream("Musterplan.pdf");
+		File musterplanFile = new File(tempDir, "Musterplan.pdf");
+		IOUtils.copy(isMusterplan, musterplanFile);
+
 
 		FileOutputStream zipfile = new FileOutputStream(outputZipFileName);
 		ZipOutputStream zipOutputStream = new ZipOutputStream(zipfile);
@@ -71,6 +76,11 @@ public class GeobauObj {
 		ZipEntry hinweiseZipEntry = new ZipEntry(hinweiseFile.getName());
 		zipOutputStream.putNextEntry(hinweiseZipEntry);
 		new FileInputStream(hinweiseFile).getChannel().transferTo(0, hinweiseFile.length(), Channels.newChannel(zipOutputStream));
+
+		// Musterplan
+		ZipEntry musterplanZipEntry = new ZipEntry(musterplanFile.getName());
+		zipOutputStream.putNextEntry(musterplanZipEntry);
+		new FileInputStream(musterplanFile).getChannel().transferTo(0, musterplanFile.length(), Channels.newChannel(zipOutputStream));
 
 		// DXF
 		ZipEntry zipEntry = new ZipEntry(destinationFile.getName());

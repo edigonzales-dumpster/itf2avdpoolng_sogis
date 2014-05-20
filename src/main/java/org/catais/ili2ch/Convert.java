@@ -68,7 +68,11 @@ public class Convert {
     				File hinweiseFile = new File(tempDir, "Hinweise.pdf");
     				IOUtils.copy(isHinweise, hinweiseFile);
     				
-		        	File destinationFile = new File(outputFileName);    		        	
+    				InputStream isMusterplan =  ImportData.class.getResourceAsStream("Musterplan.pdf");
+    				File musterplanFile = new File(tempDir, "Musterplan.pdf");
+    				IOUtils.copy(isMusterplan, musterplanFile);
+
+    				File destinationFile = new File(outputFileName);    		        	
         			String outputZipFileName = ili2chDir + dir.separator + "ch_" + f.substring(0, 6) + ".zip";
         			
     				FileOutputStream zipfile = new FileOutputStream(outputZipFileName);
@@ -88,6 +92,11 @@ public class Convert {
     				ZipEntry hinweiseZipEntry = new ZipEntry(hinweiseFile.getName());
     				zipOutputStream.putNextEntry(hinweiseZipEntry);
     				new FileInputStream(hinweiseFile).getChannel().transferTo(0, hinweiseFile.length(), Channels.newChannel(zipOutputStream));
+    				
+    				// Musterplan
+    				ZipEntry musterplanZipEntry = new ZipEntry(musterplanFile.getName());
+    				zipOutputStream.putNextEntry(musterplanZipEntry);
+    				new FileInputStream(musterplanFile).getChannel().transferTo(0, musterplanFile.length(), Channels.newChannel(zipOutputStream));
     				
     				zipOutputStream.closeEntry();
     				zipOutputStream.close();

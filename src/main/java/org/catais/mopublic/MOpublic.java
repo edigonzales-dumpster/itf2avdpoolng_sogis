@@ -16,6 +16,7 @@ import java.util.zip.ZipOutputStream;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.catais.geobau.GeobauObj;
 import org.catais.importdata.ImportData;
 import org.catais.utils.IOUtils;
 import org.geotools.data.DataStore;
@@ -359,6 +360,9 @@ public class MOpublic {
 		File pdfFile = new File(shpDirPath, "Hinweise.pdf");
 		IOUtils.copy(is, pdfFile);
 
+		InputStream isMusterplan =  MOpublic.class.getResourceAsStream("Musterplan.pdf");
+		File musterplanFile = new File(shpDirPath, "Musterplan.pdf");
+		IOUtils.copy(isMusterplan, musterplanFile);
 	
 		String outFilename = shpDirPath + ".zip";
 		ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(outFilename));
