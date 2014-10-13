@@ -27,7 +27,8 @@ import org.opengis.feature.Feature;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.feature.simple.SimpleFeatureType;
 import org.opengis.filter.PropertyIsEqualTo;
-
+import org.opengis.filter.sort.SortBy;
+import org.opengis.filter.sort.SortOrder;
 import ch.interlis.ili2c.Ili2cException;
 
 public class Geobau {
@@ -91,8 +92,10 @@ public class Geobau {
         				String[] dxfQuery = (String[]) dxfQueries.get(i);
         				String vtName = dxfQuery[0];
         				String sql = dxfQuery[1];
-        				logger.debug("layer_id: " + vtName);
+        				logger.debug("layer_id: " + vtName);    				
         				logger.debug("sql: " + sql);
+
+        				// ACHTUNG: Richtig mühsam wegen den Permissions. ALLES muss stimmen (auch Sequenzen etc.).
         				
                         VirtualTable vt = new VirtualTable(vtName, sql);
                         ((JDBCDataStore) datastore).addVirtualTable(vt);
@@ -152,9 +155,11 @@ public class Geobau {
         params.put(PostgisNGDataStoreFactory.PREPARED_STATEMENTS, true );                
 
         DataStore datastore = new PostgisNGDataStoreFactory().createDataStore(params);
-        
+                
         FeatureSource<SimpleFeatureType, SimpleFeature> source = datastore.getFeatureSource("lookup_tables_dxfgeobau_queries");        
-        FeatureCollection fc = source.getFeatures();
+        org.opengis.filter.FilterFactory ff = CommonFactoryFinder.getFilterFactory(null);
+        SortBy sortBy = ff.sort("layer_id", SortOrder.ASCENDING);
+        FeatureCollection fc = source.getFeatures().sort(sortBy);        
 
         FeatureIterator jt = fc.features();
         try {

@@ -187,7 +187,7 @@ public class DxfENTITY {
 		sb.append(DxfGroup.toString(10, "0.0"));
 		sb.append(DxfGroup.toString(20, "0.0"));
 		if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
-		sb.append(DxfGroup.toString(70, 8));
+		sb.append(DxfGroup.toString(70, 32));
 
 		for (int i = 0 ; i < coords.length ; i++) {
 			sb.append(DxfGroup.toString(0, "VERTEX"));
@@ -212,7 +212,7 @@ public class DxfENTITY {
 		if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
 		// Ziegler 22-07-2008
 		//sb.append(DxfGroup.toString(70, 9));
-		sb.append(DxfGroup.toString(70, 1));
+		sb.append(DxfGroup.toString(70, 32));
 		for (int i = 0 ; i < coords.length ; i++) {
 			sb.append(DxfGroup.toString(0, "VERTEX"));
 			sb.append(DxfGroup.toString(8, layerName));
@@ -221,7 +221,7 @@ public class DxfENTITY {
 			if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
 			//sb.append(DxfGroup.toString(70, 32));
 			// Ziegler 22-07-2008
-			sb.append(DxfGroup.toString(70, 1));
+			sb.append(DxfGroup.toString(70, 32));
 		}
 		sb.append(DxfGroup.toString(0, "SEQEND"));
 		for (int h = 0 ; h < geom.getNumInteriorRing() ; h++) {
@@ -235,7 +235,7 @@ public class DxfENTITY {
 			if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
 			// Ziegler 22-07-2008
 			//sb.append(DxfGroup.toString(70, 9));
-			sb.append(DxfGroup.toString(70, 1));
+			sb.append(DxfGroup.toString(70, 32));
 			coords = geom.getInteriorRingN(h).getCoordinates();
 			for (int i = 0 ; i < coords.length ; i++) {
 				sb.append(DxfGroup.toString(0, "VERTEX"));
@@ -246,7 +246,7 @@ public class DxfENTITY {
 				if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
 				//sb.append(DxfGroup.toString(70, 32));
 				// Ziegler 22-07-2008
-				sb.append(DxfGroup.toString(70, 0));
+				sb.append(DxfGroup.toString(70, 32));
 			}
 			sb.append(DxfGroup.toString(0, "SEQEND"));
 		}
