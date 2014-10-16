@@ -112,7 +112,11 @@ public class DxfENTITY {
 				if((Double) feature.getAttribute("_z") > 0) {
 					sb.append(DxfGroup.toString(30, h, precision));
 				}
+			} else {
+				sb.append(DxfGroup.toString(30, 0, precision));			
 			}
+				
+				
 			sb.append(DxfGroup.toString(50, "0.0"));
 			sb.append(DxfGroup.toString(41, "0.5"));
 			sb.append(DxfGroup.toString(42, "0.5"));
@@ -128,6 +132,7 @@ public class DxfENTITY {
 			Coordinate coord = ((Point)feature.getDefaultGeometry()).getCoordinate();
 			sb.append(DxfGroup.toString(10, coord.x, precision));
 			sb.append(DxfGroup.toString(20, coord.y, precision));
+			sb.append(DxfGroup.toString(30, 0, precision));
 			
 			// Robuster machen, falls ori, hali etc fehlen...
 			Double ori = (Double) feature.getAttribute("ori");
@@ -167,7 +172,8 @@ public class DxfENTITY {
 
 			sb.append(DxfGroup.toString(73, dxfVali.toString()));
 			sb.append(DxfGroup.toString(11, coord.x, precision));
-			sb.append(DxfGroup.toString(21, coord.y, precision));       
+			sb.append(DxfGroup.toString(21, coord.y, precision));
+			sb.append(DxfGroup.toString(31, 0));   
 
 		}
 		else {
@@ -186,7 +192,8 @@ public class DxfENTITY {
 		sb.append(DxfGroup.toString(66, 1));
 		sb.append(DxfGroup.toString(10, "0.0"));
 		sb.append(DxfGroup.toString(20, "0.0"));
-		if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
+		sb.append(DxfGroup.toString(30, "0.0"));
+//		if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
 		sb.append(DxfGroup.toString(70, 32));
 
 		for (int i = 0 ; i < coords.length ; i++) {
@@ -194,6 +201,7 @@ public class DxfENTITY {
 			sb.append(DxfGroup.toString(8, layerName));
 			sb.append(DxfGroup.toString(10, coords[i].x, precision));
 			sb.append(DxfGroup.toString(20, coords[i].y, precision));
+			sb.append(DxfGroup.toString(30, 0));
 			if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
 			sb.append(DxfGroup.toString(70, 32));
 		}
@@ -209,6 +217,7 @@ public class DxfENTITY {
 		sb.append(DxfGroup.toString(66, 1));
 		sb.append(DxfGroup.toString(10, "0.0"));
 		sb.append(DxfGroup.toString(20, "0.0"));
+		sb.append(DxfGroup.toString(30, "0.0"));
 		if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
 		// Ziegler 22-07-2008
 		//sb.append(DxfGroup.toString(70, 9));
@@ -218,7 +227,8 @@ public class DxfENTITY {
 			sb.append(DxfGroup.toString(8, layerName));
 			sb.append(DxfGroup.toString(10, coords[i].x, precision));
 			sb.append(DxfGroup.toString(20, coords[i].y, precision));
-			if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
+			sb.append(DxfGroup.toString(30, 0, precision));
+//			if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
 			//sb.append(DxfGroup.toString(70, 32));
 			// Ziegler 22-07-2008
 			sb.append(DxfGroup.toString(70, 32));
@@ -232,7 +242,8 @@ public class DxfENTITY {
 			sb.append(DxfGroup.toString(66, 1));
 			sb.append(DxfGroup.toString(10, "0.0"));
 			sb.append(DxfGroup.toString(20, "0.0"));
-			if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
+			sb.append(DxfGroup.toString(30, 0, precision));			
+//			if (!Double.isNaN(coords[0].z)) sb.append(DxfGroup.toString(30, "0.0"));
 			// Ziegler 22-07-2008
 			//sb.append(DxfGroup.toString(70, 9));
 			sb.append(DxfGroup.toString(70, 32));
@@ -243,7 +254,8 @@ public class DxfENTITY {
 				else sb.append(DxfGroup.toString(8, layerName));
 				sb.append(DxfGroup.toString(10, coords[i].x, precision));
 				sb.append(DxfGroup.toString(20, coords[i].y, precision));
-				if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
+				sb.append(DxfGroup.toString(30, 0, precision));				
+//				if (!Double.isNaN(coords[i].z)) sb.append(DxfGroup.toString(30, coords[i].z, precision));
 				//sb.append(DxfGroup.toString(70, 32));
 				// Ziegler 22-07-2008
 				sb.append(DxfGroup.toString(70, 32));
