@@ -111,6 +111,8 @@ public class DxfENTITY {
 				double h = (Double) feature.getAttribute("_z");
 				if((Double) feature.getAttribute("_z") > 0) {
 					sb.append(DxfGroup.toString(30, h, precision));
+				} else {
+					sb.append(DxfGroup.toString(30, 0, precision));
 				}
 			} else {
 				sb.append(DxfGroup.toString(30, 0, precision));			
