@@ -1,29 +1,29 @@
-2015-01-20 16:24:53 org.catais.App [INFO] Start: Tue Jan 20 16:24:53 CET 2015
-2015-01-20 16:24:53 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
-2015-01-20 16:24:53 org.catais.App [DEBUG] {port=5432, doDeleteFiles=false, doExport=false, schema=av_avdpool_ng, mopublicBaseDir=/tmp/mopublic/, doPostprocessing=true, geobauDir=/tmp/, importDestinationDir=/tmp/, importModelName=DM01AVSO24, importSourceDir=/home/stefan/tmp/av/, doCommit2Svn=false, host=srsofaioi4531, renumberTid=true, doIli2freeframe=false, doImport=false, enumText=true, doGeobau=true, addAttr=true, pwd=av_import, ili2chModelName=DM01AVCH24D, doMopublic=false, dbname=sogis, doFusion=false, ili2chDir=/tmp/, user=av_import, doIli2ch=false}
-2015-01-20 16:24:53 org.catais.App [INFO] doImport: false
-2015-01-20 16:24:53 org.catais.App [INFO] doAvwms: null
-2015-01-20 16:24:53 org.catais.App [INFO] doIli2ch: false
-2015-01-20 16:24:53 org.catais.App [INFO] doIli2freeframe: false
-2015-01-20 16:24:53 org.catais.App [INFO] doGeobau: true
-2015-01-20 16:24:53 org.catais.App [INFO] doMopublic: false
-2015-01-20 16:24:53 org.catais.App [INFO] doCommit2Svn: false
-2015-01-20 16:24:53 org.catais.App [INFO] doDeleteFiles: false
-2015-01-20 16:24:53 org.catais.App [INFO] doVacuum: null
-2015-01-20 16:24:53 org.catais.App [INFO] doReindex: null
-2015-01-20 16:24:53 org.catais.App [INFO] doExport: false
-2015-01-20 16:24:53 org.catais.App [INFO] doFusion: false
-2015-01-20 16:24:53 org.catais.App [INFO] doPostprocessing: true
-2015-01-20 16:24:53 org.catais.App [INFO] Start postprocessing...
-2015-01-20 16:24:53 org.catais.postprocessing.PostProcessing [INFO] PostProcessing: /home/stefan/tmp/av/254600.itf
-2015-01-20 16:25:26 org.catais.postprocessing.PostProcessing [INFO] Postprocessing: 2546 commited.
-2015-01-20 16:25:26 org.catais.App [INFO] End postprocessing.
-2015-01-20 16:25:26 org.catais.App [INFO] Start Geobau...
-2015-01-20 16:25:26 org.catais.geobau.Geobau [INFO] Geobau: 254600.itf
-2015-01-20 16:25:26 org.catais.geobau.GeobauObj [INFO] /tmp//2546.dxf
-2015-01-20 16:25:59 org.catais.geobau.GeobauObj [INFO] Zipping file...
-2015-01-20 16:26:02 org.catais.geobau.GeobauObj [INFO] File zipped: /tmp//2546.zip
-2015-01-20 16:26:02 org.catais.geobau.Geobau [INFO] Geobau 254600.itf finished.
-2015-01-20 16:26:02 org.catais.App [INFO] End Geobau.
-2015-01-20 16:26:02 org.catais.App [INFO] End: Tue Jan 20 16:26:02 CET 2015
-2015-01-20 16:26:02 org.catais.App [INFO] Import beendet mit: 0 Fehler.
+2015-02-23 16:43:15 org.catais.App [INFO] Start: Mon Feb 23 16:43:15 CET 2015
+2015-02-23 16:43:15 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
+2015-02-23 16:43:15 org.catais.App [DEBUG] {port=5432, doDeleteFiles=false, doExport=false, schema=av_avdpool_ng, mopublicBaseDir=/tmp/mopublic/, doPostprocessing=true, geobauDir=/tmp/, importDestinationDir=/tmp/, importModelName=DM01AVSO24, importSourceDir=/home/stefan/tmp/av/, doCommit2Svn=false, host=srsofaioi4531, renumberTid=true, doIli2freeframe=false, doImport=false, enumText=true, doGeobau=true, addAttr=true, pwd=av_import, ili2chModelName=DM01AVCH24D, doMopublic=false, dbname=sogis, doFusion=false, ili2chDir=/tmp/, user=av_import, doIli2ch=false}
+2015-02-23 16:43:15 org.catais.App [INFO] doImport: false
+2015-02-23 16:43:15 org.catais.App [INFO] doAvwms: null
+2015-02-23 16:43:15 org.catais.App [INFO] doIli2ch: false
+2015-02-23 16:43:15 org.catais.App [INFO] doIli2freeframe: false
+2015-02-23 16:43:15 org.catais.App [INFO] doGeobau: true
+2015-02-23 16:43:15 org.catais.App [INFO] doMopublic: false
+2015-02-23 16:43:15 org.catais.App [INFO] doCommit2Svn: false
+2015-02-23 16:43:15 org.catais.App [INFO] doDeleteFiles: false
+2015-02-23 16:43:15 org.catais.App [INFO] doVacuum: null
+2015-02-23 16:43:15 org.catais.App [INFO] doReindex: null
+2015-02-23 16:43:15 org.catais.App [INFO] doExport: false
+2015-02-23 16:43:15 org.catais.App [INFO] doFusion: false
+2015-02-23 16:43:15 org.catais.App [INFO] doPostprocessing: true
+2015-02-23 16:43:15 org.catais.App [INFO] Start postprocessing...
+2015-02-23 16:43:15 org.catais.postprocessing.PostProcessing [INFO] PostProcessing: /home/stefan/tmp/av/255500.itf
+2015-02-23 16:43:53 org.catais.postprocessing.PostProcessing [INFO] Postprocessing: 2555 commited.
+2015-02-23 16:43:53 org.catais.App [INFO] End postprocessing.
+2015-02-23 16:43:53 org.catais.App [INFO] Start Geobau...
+2015-02-23 16:43:53 org.catais.geobau.Geobau [INFO] Geobau: 255500.itf
+2015-02-23 16:43:53 org.catais.geobau.GeobauObj [INFO] /tmp//2555.dxf
+2015-02-23 16:44:10 org.catais.geobau.GeobauObj [INFO] Zipping file...
+2015-02-23 16:44:11 org.catais.geobau.GeobauObj [INFO] File zipped: /tmp//2555.zip
+2015-02-23 16:44:11 org.catais.geobau.Geobau [INFO] Geobau 255500.itf finished.
+2015-02-23 16:44:11 org.catais.App [INFO] End Geobau.
+2015-02-23 16:44:11 org.catais.App [INFO] End: Mon Feb 23 16:44:11 CET 2015
+2015-02-23 16:44:11 org.catais.App [INFO] Import beendet mit: 0 Fehler.
