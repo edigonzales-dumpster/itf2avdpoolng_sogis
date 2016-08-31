@@ -44,7 +44,8 @@ public class Ili2FreeFrame {
 		logger.setLevel(Level.INFO);
 
 		freeFrame = new FreeFrame();
-		freeFrame.setDstRefFrame("LV95");
+		freeFrame.setDstRefFrame("LV03");
+		freeFrame.createFeatureCollections();
 		freeFrame.buildSpatialIndex();
 
 		inputIliTd = getTransferDescription(inIli);
@@ -56,8 +57,7 @@ public class Ili2FreeFrame {
 		
 		logger.info("InputModelName: " + inputModelName);
 		logger.info("OutputModelName: " + outputModelName);
-
-		
+				
 		try {
 			ioxReader = new ch.interlis.iom_j.itf.ItfReader(new java.io.File(inItf));
 			((ItfReader) ioxReader).setModel(inputIliTd);
@@ -72,7 +72,7 @@ public class Ili2FreeFrame {
 
 			IoxEvent event = ioxReader.read();
 			while (event!=null) {
-
+			
 				if(event instanceof StartBasketEvent) {
 					StartBasketEvent inputBasketEvent = (StartBasketEvent) event;
 
@@ -86,7 +86,7 @@ public class Ili2FreeFrame {
 
 				} else if(event instanceof ObjectEvent) {
 					IomObject iomObj = ((ObjectEvent)event).getIomObject();
-					
+										
 					transformGeometry(iomObj);
 					
 					String tag = iomObj.getobjecttag();
@@ -156,11 +156,13 @@ public class Ili2FreeFrame {
         					}
         				}	
         			} else if (type instanceof CoordType || type instanceof AreaType) {
-        				IomObject value = iomObj.getattrobj(attrName, 0);
+        				IomObject value = iomObj.getattrobj(attrName, 0);        				
         				
         				if (value != null) {
         					try {
+//        						logger.debug(value);
             					IomObject pointObj = freeFrame.transformPoint(value);
+//        						logger.debug(pointObj);
             					iomObj.changeattrobj(attrName, 0, pointObj); 
         					} catch (Exception e) {
         						e.printStackTrace();
@@ -195,7 +197,7 @@ public class Ili2FreeFrame {
 
 	private ch.interlis.ili2c.metamodel.TransferDescription getTransferDescription(String iliFile) throws Ili2cException {
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{"http://localhost/~stefan/models/", "http://www.sogeo.ch/models/", "http://models.geo.admin.ch/"};
+    	String repositories[] = new String[]{"http://geo.so.ch/models/", "http://models.geo.admin.ch/"};
     	manager.setRepositories(repositories);
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(iliFile);

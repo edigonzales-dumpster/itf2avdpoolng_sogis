@@ -106,7 +106,7 @@ public class PostProcessing {
 
                             //t.executeUpdate(sqlDelete);
                             t.executeUpdate(sqlUpdate);
-                            logger.debug(table);
+                            logger.info(table);
                         }
 
                         conn.commit();

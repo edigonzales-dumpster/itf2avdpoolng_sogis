@@ -39,7 +39,7 @@ public class Avwms {
    
     
     public Avwms(HashMap params) throws ClassNotFoundException, SQLException {
-    	logger.setLevel(Level.INFO);
+    	logger.setLevel(Level.DEBUG);
 
     	this.params = params;
     	readParams();
@@ -81,7 +81,7 @@ public class Avwms {
 					while (rs.next()) {
 						String sql = rs.getString("sql");
 						String sql1 = sql.replace("___GEM_BFS", gem_bfs);
-						logger.debug(sql1);
+//						logger.debug(sql1);
 						queries.add(sql1);
 						
 						String table = rs.getString("table");
@@ -111,7 +111,7 @@ public class Avwms {
 							
 							t.executeUpdate(sqlDelete);
 							t.executeUpdate(sqlInsert);
-							logger.debug(table);
+							logger.info(table);
 						}
 						
 						conn.commit();

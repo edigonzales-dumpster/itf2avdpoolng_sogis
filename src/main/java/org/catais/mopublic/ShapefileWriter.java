@@ -54,9 +54,10 @@ public class ShapefileWriter {
 		gem = gemeinde;
 		frame = referenceFrame;
 			
-		if (frame.equalsIgnoreCase("lv95")) {
-			freeFrame = new org.catais.freeframe.FreeFrame();
+		if (frame.equalsIgnoreCase("lv03")) {
+			freeFrame = new org.catais.freeframe.FreeFrame();			
 			freeFrame.setDstRefFrame(frame);
+			freeFrame.createFeatureCollections();
 			freeFrame.buildSpatialIndex();
 		}
 	}
@@ -110,8 +111,8 @@ public class ShapefileWriter {
 	
 					featureStore.setTransaction(transaction);
 					try {
-						if (frame.equalsIgnoreCase("lv95")) {
-							FeatureCollection fcTrans = transform(fc);
+						if (frame.equalsIgnoreCase("lv03")) {
+							FeatureCollection fcTrans = freeFrame.transformFeatureCollection(fc);
 							featureStore.addFeatures(fcTrans);
 						} else {
 							featureStore.addFeatures(fc);	

@@ -148,7 +148,7 @@ public class IliReader {
      * @param iliFile Interlis1-Datenmodell
      */
     public IliReader(LinkedHashMap additionalAttributes, HashMap params) throws IllegalArgumentException, IOException, Exception {
-    	logger.setLevel(Level.DEBUG);
+    	logger.setLevel(Level.INFO);
 
     	this.additionalAttributes = additionalAttributes;
     	this.params = params;
@@ -245,7 +245,7 @@ public class IliReader {
     public void compileModel() throws Ili2cException {    	
     	
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{"http://www.catais.org/models/", "http://www.sogeo.ch/models/", "http://models.geo.admin.ch/"};
+    	String repositories[] = new String[]{"http://geo.so.ch/models/", "http://models.geo.admin.ch/"};
     	manager.setRepositories(repositories);
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(this.inputRepoModelName);
@@ -972,7 +972,7 @@ public class IliReader {
 				store.setTransaction(t);
 
 //				try {    				
-					logger.debug("Add features: "+featureName);
+					logger.info("Add features: "+featureName);
 					store.addFeatures(collection);
 //					t.commit();
 

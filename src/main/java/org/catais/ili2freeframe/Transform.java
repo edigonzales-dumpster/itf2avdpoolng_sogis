@@ -48,13 +48,13 @@ public class Transform {
     			logger.info("Ili2freeframe: " + dir.getAbsolutePath() + dir.separator + f);    			
     			try {
         			Ili2FreeFrame ili2freeframe = new Ili2FreeFrame();
-        			String outputFileName = ili2freeframeDir + dir.separator + "ch_lv95_" + f;
-        			ili2freeframe.transform(inputRepoModelName, outputRepoModelName, new File(ili2chDir).getAbsolutePath() + dir.separator + "ch_" + f, outputFileName);
-	    			logger.info("Transformed: " + dir.getAbsolutePath() + dir.separator + "ch_" + f);
+        			String outputFileName = ili2freeframeDir + dir.separator + "lv03_" + f;
+        			ili2freeframe.transform(inputRepoModelName, outputRepoModelName, dir.getAbsolutePath() + dir.separator + f, outputFileName);
+	    			logger.info("Transformed: " + dir.getAbsolutePath() + dir.separator + f);
 	    			
     				logger.info("Zipping file...");
 		        	File destinationFile = new File(outputFileName);    		        	
-        			String outputZipFileName = ili2freeframeDir + dir.separator + "ch_lv95_" + f.substring(0, 6) + ".zip";
+        			String outputZipFileName = ili2freeframeDir + dir.separator + "lv03_" + f.substring(0, 6) + ".zip";
         			
     				FileOutputStream zipfile = new FileOutputStream(outputZipFileName);
     				ZipOutputStream zipOutputStream = new ZipOutputStream(zipfile);
@@ -76,7 +76,7 @@ public class Transform {
 	}
 	
 	private void readParams() {		
-    	this.inputRepoModelName = (String) params.get("ili2chModelName");
+    	this.inputRepoModelName = (String) params.get("importModelName");
 		logger.debug("inputRepoModelName: " + this.inputRepoModelName);
 		if (this.inputRepoModelName == null) {
 			throw new IllegalArgumentException("importModelName not set.");
@@ -100,10 +100,11 @@ public class Transform {
 			throw new IllegalArgumentException("Import source dir not set.");
 		}
 		
-		this.ili2chDir = (String) params.get("ili2chDir");
-		logger.debug("ili2chDir source Directory: " + this.ili2chDir);
-		if (ili2chDir == null) {
-			throw new IllegalArgumentException("ili2chDir source dir not set.");
-		}   
+		// Not needed anymore since we transform now ITF-SO.
+//		this.ili2chDir = (String) params.get("ili2chDir");
+//		logger.debug("ili2chDir source Directory: " + this.ili2chDir);
+//		if (ili2chDir == null) {
+//			throw new IllegalArgumentException("ili2chDir source dir not set.");
+//		}   
     }
 }

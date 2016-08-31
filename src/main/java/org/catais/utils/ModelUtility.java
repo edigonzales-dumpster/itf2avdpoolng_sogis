@@ -188,8 +188,8 @@ public class ModelUtility {
 								SimpleFeatureTypeBuilder typeBuilder = new SimpleFeatureTypeBuilder();
 								typeBuilder.setName(className);
 								typeBuilder.setNamespaceURI( "http://www.catais.org" );
-								//typeBuilder.setSRS("EPSG:2056");
-								typeBuilder.setSRS("EPSG:21781");
+								typeBuilder.setSRS("EPSG:2056");
+								//typeBuilder.setSRS("EPSG:21781");
 
 								typeBuilder.add("tid", String.class);
 
@@ -223,8 +223,8 @@ public class ModelUtility {
 											SimpleFeatureTypeBuilder typeBuilderRef = new SimpleFeatureTypeBuilder();
 											typeBuilderRef.setName(className+"_"+name);
 											typeBuilderRef.setNamespaceURI( "http://www.catais.org" );
-											//typeBuilderRef.setSRS("EPSG:2056");
-											typeBuilderRef.setSRS("EPSG:21781");
+											typeBuilderRef.setSRS("EPSG:2056");
+											//typeBuilderRef.setSRS("EPSG:21781");
 
 											typeBuilderRef.add("tid", String.class);
 											typeBuilderRef.add("_itf_ref", String.class);
@@ -259,8 +259,8 @@ public class ModelUtility {
 											SimpleFeatureTypeBuilder typeBuilderRef = new SimpleFeatureTypeBuilder();
 											typeBuilderRef.setName(className+"_"+name);
 											typeBuilderRef.setNamespaceURI( "http://www.catais.org" );
-											//typeBuilderRef.setSRS("EPSG:2056");
-											typeBuilderRef.setSRS("EPSG:21781");
+											typeBuilderRef.setSRS("EPSG:2056");
+											//typeBuilderRef.setSRS("EPSG:21781");
 
 											typeBuilderRef.add("tid", String.class);
 											typeBuilderRef.add("_itf_ref", String.class);

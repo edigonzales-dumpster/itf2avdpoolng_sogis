@@ -41,7 +41,7 @@ public class ImportData {
 	
 	
 	public ImportData(HashMap params) {
-		logger.setLevel(Level.INFO);
+		logger.setLevel(Level.DEBUG);
 		
 		this.params = params;
 		readParams();
@@ -127,8 +127,8 @@ public class ImportData {
         				logger.info("Zipping file...");
         				// We add also some metadata files to the zipfile (e.g. ili file).
         		    	File tempDir = IOUtils.createTempDirectory("itf2avdpoolng");
-        				InputStream is =  ImportData.class.getResourceAsStream("dm01avso24.ili");
-        				File iliFile = new File(tempDir, "dm01avso24.ili");
+        				InputStream is =  ImportData.class.getResourceAsStream("dm01avso24lv95.ili");
+        				File iliFile = new File(tempDir, "dm01avso24lv95.ili");
         				IOUtils.copy(is, iliFile);
         				
         				InputStream isHinweise =  ImportData.class.getResourceAsStream("Hinweise.pdf");

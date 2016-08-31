@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.catais.freeframe.FreeFrame;
 import org.catais.ili2ch.Ili2ch;
 import org.geotools.data.DataStore;
 import org.geotools.data.FeatureSource;
@@ -68,8 +69,17 @@ public class Geobau {
     			logger.info("Geobau: " + f);    	
     			
     			try {
-        			GeobauObj geobauObj = new GeobauObj(this.geobauDir, f);
+    				// Hardcode LV95 / LV03 DXF-Export.
+    				String fosnr = Integer.valueOf(f.substring(0, 4)).toString();
     				
+        			GeobauObj geobauObj = new GeobauObj(this.geobauDir, fosnr);
+        			GeobauObj geobauObjLV03 = new GeobauObj(this.geobauDir, "lv03_" + fosnr);
+        			
+        			FreeFrame freeFrame = new FreeFrame();
+        			freeFrame.setDstRefFrame("LV03");
+        			freeFrame.createFeatureCollections();
+        			freeFrame.buildSpatialIndex();
+        			
     				Map params= new HashMap();
     		        params.put("dbtype", "postgis");        
     		        params.put("host", this.host);        
@@ -102,11 +112,13 @@ public class Geobau {
                         FeatureSource source = datastore.getFeatureSource(vtName);
                         
                         org.opengis.filter.FilterFactory ff = CommonFactoryFinder.getFilterFactory(null);
-                		String fosnr = Integer.valueOf(f.substring(0, 4)).toString();
                         PropertyIsEqualTo filter = ff.equals(ff.property("gem_bfs"), ff.literal(fosnr)); 
                         logger.debug(filter.toString());
                         
                         FeatureCollection fc = source.getFeatures(filter);
+                        
+                        // LV03 FeatureCollection
+                        FeatureCollection fcTrans = freeFrame.transformFeatureCollection(fc);
                         
             			boolean header = false;
             			boolean footer = false;
@@ -115,11 +127,13 @@ public class Geobau {
                         if (i == dxfQueries.size()-1) footer = true;
 //                        logger.debug("header: " + header + " ... " + "footer: " + footer);
                         geobauObj.write(fc, vtName, 3, header, footer, sql);
+                        geobauObjLV03.write(fcTrans, vtName, 3, header, footer, sql);
         			}
         			
 
         			datastore.dispose();
                     geobauObj.zip();
+                    geobauObjLV03.zip();
         			logger.info("Geobau " + f + " finished.");
         			
     			} catch (NumberFormatException e) {

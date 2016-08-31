@@ -50,10 +50,10 @@ public class ExportMopublic {
 //					mopublic.write(f.substring(0, 4), "d", topics, "sqlite", "LV03");
 
 //    				mopublic = new MOpublic(params);
-					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV03");
+					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV95");
 
 //    				mopublic = new MOpublic(params);
-//					mopublic.write(f.substring(0, 4), "e", topics, "shp", "LV03");
+					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV03");
 //
 //    				mopublic = new MOpublic(params);
 //					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV95");

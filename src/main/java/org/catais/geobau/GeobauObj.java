@@ -29,24 +29,24 @@ public class GeobauObj {
 	
 	BufferedWriter fw = null;
 	String geobauDir = null;
-	String fosnr = null;
 	String outputFileName = null;
+	String dxfFileName = null;
 	
-	public GeobauObj(String geobauDir, String itfFileName) throws NumberFormatException, FileNotFoundException, UnsupportedEncodingException {
+	public GeobauObj(String geobauDir, String dxfFileName) throws NumberFormatException, FileNotFoundException, UnsupportedEncodingException {
 		logger.setLevel(Level.INFO);
 		
+		this.dxfFileName = dxfFileName;
 		this.geobauDir = geobauDir;
-		fosnr = Integer.valueOf(itfFileName.substring(0, 4)).toString();
-		outputFileName = geobauDir + File.separator +  fosnr + ".dxf";
+		outputFileName = geobauDir + File.separator +  dxfFileName + ".dxf";
 		FileOutputStream dxffile = new FileOutputStream(outputFileName);	
-		logger.info(geobauDir + File.separator +  fosnr + ".dxf");
+		logger.info(geobauDir + File.separator +  dxfFileName + ".dxf");
 		fw = new BufferedWriter(new OutputStreamWriter(dxffile, "ISO-8859-1"));	
 	}
 	
 	public void zip() throws FileNotFoundException, IOException {
 		logger.info("Zipping file...");
     	File destinationFile = new File(outputFileName);    		        	
-		String outputZipFileName = geobauDir + File.separator +  fosnr + ".zip";
+		String outputZipFileName = geobauDir + File.separator +  dxfFileName + ".zip";
 		
 		// We add also some metadata files to the zipfile.
 
@@ -95,7 +95,8 @@ public class GeobauObj {
 	
 	public void write(FeatureCollection fc, String layerName, int precision, boolean header, boolean footer, String sqlquery) throws IOException, Exception {
 		if (header) {
-			Envelope envelope = envelope = fc.getBounds();
+			// Does not work. Never worked?
+			Envelope envelope = fc.getBounds();
 	        fw.write(DxfGroup.toString(0, "SECTION"));
 	        fw.write(DxfGroup.toString(2, "HEADER"));
 	        fw.write(DxfGroup.toString(9, "$EXTMAX"));

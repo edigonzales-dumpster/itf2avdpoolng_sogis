@@ -98,7 +98,7 @@ public class App
 			logger.info("doExport: " + doExport);
 			logger.info("doFusion: " + doFusion);
             logger.info("doPostprocessing: " + doPostprocessing);
-			
+			            
 			// Do the action:
 			// Import
 			if (doImport == true) {
@@ -141,6 +141,7 @@ public class App
 				logger.info("End AV-WMS.");
 			}
 			
+			
 			// Postprocessing (aka additional tables)
 			if (doPostprocessing == true) {
 			    logger.info("Start postprocessing...");
@@ -156,7 +157,7 @@ public class App
                 }
 	            logger.info("End postprocessing.");
 			}
-			
+						
 			// Vacuum
 			if (doVacuum != null) {
 				logger.info("Start Vacuum...");
@@ -188,7 +189,7 @@ public class App
 				}
 				logger.info("End Reindexing.");
 			}
-			
+						
 			// Ili2ch
 			if (doIli2ch == true) {
 				logger.info("Start Converting...");
@@ -210,6 +211,7 @@ public class App
 				}
 			}
 			
+			
 			// Ili2freeframe
 			if (doIli2freeframe == true) {
 				logger.info("Start Transforming...");
@@ -221,7 +223,7 @@ public class App
 					logger.error(e.getMessage());
 				}
 			}
-			
+						
 			// Geobau
 			if (doGeobau == true) {
 				logger.info("Start Geobau...");
@@ -245,6 +247,8 @@ public class App
 				}
 				logger.info("End Mopublic.");
 			}
+			
+            System.exit(0);
 			
 			// Commit to svn
 			if (doCommit2Svn == true) {

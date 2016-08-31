@@ -92,10 +92,10 @@ public class Reindex {
 			throw new IllegalArgumentException("dbname not set.");
 		}	
 		
-    	this.schema = (String) params.get("vacuum");
-		logger.debug("vacuum schemas: " + this.schema);		
+    	this.schema = (String) params.get("reindex");
+		logger.debug("reindex schemas: " + this.schema);		
 		if (this.schema == null) {
-			throw new IllegalArgumentException("vacuum schema(s) not set.");
+			throw new IllegalArgumentException("reindex schema(s) not set.");
 		}			
 
     	this.user = (String) params.get("user");

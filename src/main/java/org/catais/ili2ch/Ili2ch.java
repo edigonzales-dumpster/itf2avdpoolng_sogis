@@ -198,7 +198,7 @@ public class Ili2ch {
 
 	private ch.interlis.ili2c.metamodel.TransferDescription getTransferDescription(String iliFile) throws Ili2cException {
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{"http://www.catais.org/models/", "http://models.geo.admin.ch/"};
+    	String repositories[] = new String[]{"http://geo.so.ch/models/", "http://models.geo.admin.ch/"};
     	manager.setRepositories(repositories);
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(iliFile);

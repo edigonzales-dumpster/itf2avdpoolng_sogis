@@ -18,13 +18,19 @@ import org.geotools.data.shapefile.ShapefileDataStoreFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;
 import org.geotools.data.simple.SimpleFeatureSource;
+import org.geotools.feature.FeatureCollection;
+import org.geotools.feature.FeatureCollections;
+import org.geotools.feature.FeatureIterator;
 import org.opengis.feature.simple.SimpleFeature;
 import org.geotools.geometry.jts.WKTReader2;
 
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.LineString;
 import com.vividsolutions.jts.geom.LinearRing;
+import com.vividsolutions.jts.geom.MultiLineString;
+import com.vividsolutions.jts.geom.MultiPoint;
 import com.vividsolutions.jts.geom.MultiPolygon;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.Polygon;
@@ -52,19 +58,19 @@ public class FreeFrame {
 	private SpatialIndex spatialIndex = null;
 
 	public FreeFrame() {
+		logger.setLevel(Level.INFO);
+
 		createFeatureCollections();
 	}
 		
 	
 	public IomObject transformPoint(IomObject pointObj) throws Exception {
-		
-		logger.setLevel(Level.INFO);
-		
+				
 		IomObject dstPointObj = null;
 		
 		Coordinate coord = Iox2jts.coord2JTS(pointObj);
 //		logger.debug("coord: " + coord);	
-		
+
 		Coordinate dstCoord = transformCoordinate(coord);
 //		logger.debug("dstCoord: " + dstCoord);
 		
@@ -80,7 +86,7 @@ public class FreeFrame {
 		
 	public IomObject transformPolyline(IomObject polylineObj) throws Exception { 
 		
-		logger.setLevel(Level.OFF);
+//		logger.setLevel(Level.DEBUG);
 		
 //		logger.debug("new polylineObj");
 				
@@ -232,12 +238,12 @@ public class FreeFrame {
     
 
 	public Coordinate transformCoordinate(Coordinate coord) {
-		logger.setLevel(Level.OFF);
+		logger.setLevel(Level.DEBUG);
 		
     	Coordinate coordTransformed = new Coordinate();
     	Point point = new GeometryFactory().createPoint(coord);
     	PreparedPoint ppoint = new PreparedPoint(point.getInteriorPoint());
-
+      	
     	for (final Object o : spatialIndex.query(point.getEnvelopeInternal())) {
     		SimpleFeature f = (SimpleFeature) o;
     		MultiPolygon poly1 = (MultiPolygon) f.getDefaultGeometry();
@@ -266,8 +272,75 @@ public class FreeFrame {
     	return coordTransformed;
 	}
 
+
+	public FeatureCollection transformFeatureCollection(FeatureCollection fc) {
+		FeatureCollection collection = FeatureCollections.newCollection();
+
+		FeatureIterator it = fc.features();
+        try {
+        	while(it.hasNext()) { 
+        		
+        		SimpleFeature f = (SimpleFeature) it.next();
+        		        		
+        		Geometry g = (Geometry) f.getDefaultGeometry();
+        		if (g == null) {
+        			collection.add(f);
+        			continue;
+        		}
+        		
+        		if(g instanceof MultiPolygon) {        			
+        			int num = g.getNumGeometries();
+        			Polygon[] polys = new Polygon[num];
+        			for(int j=0; j<num; j++) {
+        				polys[j] = this.transformPolygon((Polygon) g.getGeometryN(j));
+        			}    
+        			MultiPolygon multipoly = new GeometryFactory().createMultiPolygon(polys);
+        			f.setDefaultGeometry(multipoly);
+        			
+        		} else if (g instanceof Polygon) {
+        			Polygon poly = this.transformPolygon((Polygon) g);
+        			f.setDefaultGeometry(poly);
+        			
+        		} else if (g instanceof MultiLineString) {
+        			int num = g.getNumGeometries();
+        			LineString[] lines = new LineString[num];
+        			for(int j=0; j<num; j++) {
+        				lines[j] = this.transformLineString((LineString) g.getGeometryN(j));
+        			}    
+        			MultiLineString multiline = new GeometryFactory().createMultiLineString(lines);
+        			f.setDefaultGeometry(multiline);
+        			
+        		} else if (g instanceof LineString) {
+        			LineString line = this.transformLineString((LineString) g);
+        			f.setDefaultGeometry(line);
+
+        		} else if (g instanceof MultiPoint) {
+        			int num = g.getNumGeometries();
+        			Point[] points  = new Point[num];
+        			for(int j=0; j<num; j++) {
+        				Coordinate coord = this.transformCoordinate(((Point) g.getGeometryN(j)).getCoordinate());
+        				points[j] = new GeometryFactory().createPoint(coord);
+        			} 
+        			MultiPoint multipoint = new GeometryFactory().createMultiPoint(points);
+        			f.setDefaultGeometry(multipoint);
+        			
+        		} else if (g instanceof Point) {
+        			Coordinate coord = this.transformCoordinate(((Point) g).getCoordinate());
+        			Point point = new GeometryFactory().createPoint(coord);
+        			point.setSRID(2056);
+        			f.setDefaultGeometry(point);
+        		}
+        		collection.add(f);
+           	}
+        } finally {
+            it.close();
+    	}
+		return collection;		
+	}
 	
-	public void setDstRefFrame(String dst) {
+	
+	
+	public void setDstRefFrame(String dst) {			
 		if (dst.equalsIgnoreCase("LV03")) {
 			srcRefFrame = "LV95";
 			dstRefFrame = "LV03";
@@ -300,10 +373,10 @@ public class FreeFrame {
 	}	
 	
 	
-	private void createFeatureCollections() {
+	public void createFeatureCollections() {
 		try {
 			File tempDir = IOUtils.createTempDirectory("ili2freeframe");
-
+			
 			String chenyx06Prefix = null;
 			if (srcRefFrame.equalsIgnoreCase("LV03")) {
 				chenyx06Prefix = "chenyx06lv03";
@@ -335,8 +408,7 @@ public class FreeFrame {
 	        	        
 			logger.debug("Source CHENyx06 shapefile: " + srcChenyx06);
 			logger.debug("Feature count of source CHENyx06 shapefile: " + srcFeatCollection.size());
-
-			
+			logger.debug("Extent: " + srcFeatCollection.getBounds().toString());
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}		

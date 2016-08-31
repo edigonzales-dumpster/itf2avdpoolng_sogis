@@ -60,8 +60,8 @@ public class Convert {
     				logger.info("Zipping file...");
     				// We add also some metadata files to the zipfile (e.g. ili file).
     		    	File tempDir = IOUtils.createTempDirectory("itf2avdpoolng");
-    				InputStream is =  Convert.class.getResourceAsStream("DM.01-AV-CH_LV03_24d_ili1.ili");
-    				File iliFile = new File(tempDir, "DM.01-AV-CH_LV03_24d_ili1.ili");
+    				InputStream is =  Convert.class.getResourceAsStream("DM.01-AV-CH_LV95_24d_ili1.ili");
+    				File iliFile = new File(tempDir, "DM.01-AV-CH_LV95_24d_ili1.ili");
     				IOUtils.copy(is, iliFile);    
     				
     				InputStream isHinweise =  ImportData.class.getResourceAsStream("Hinweise.pdf");
