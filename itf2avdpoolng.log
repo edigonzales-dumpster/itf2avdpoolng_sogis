@@ -1,36 +1,258 @@
-2016-08-31 15:45:23 org.catais.App [INFO] Start: Wed Aug 31 15:45:23 CEST 2016
-2016-08-31 15:45:23 org.catais.App [DEBUG] Properties filename: itf2avdpoolng_lv95.properties
-2016-08-31 15:45:23 org.catais.App [DEBUG] {schema=av_avdpool_ng, doExport=false, doPostprocessing=true, doFusion=false, importModelName=DM01AVSO24LV95, geobauDir=/tmp/, importSourceDir=/Users/stefan/tmp/itf_test/, ili2freeframeDir=/tmp/, host=geodb_brw.verw.rootso.org, doDeleteFiles=false, renumberTid=true, enumText=true, importDestinationDir=/tmp/, mopublicBaseDir=/tmp/mopublic/, doMopublic=false, doImport=false, doIli2ch=false, doGeobau=true, ili2chDir=/tmp/, addAttr=true, dbname=sogis, doIli2freeframe=false, port=5432, doCommit2Svn=false, ili2freeframeModelName=DM01AVSO24, pwd=av_import, user=av_import, ili2chModelName=DM01AVCH24LV95D}
-2016-08-31 15:45:23 org.catais.App [INFO] doImport: false
-2016-08-31 15:45:23 org.catais.App [INFO] doAvwms: null
-2016-08-31 15:45:23 org.catais.App [INFO] doIli2ch: false
-2016-08-31 15:45:23 org.catais.App [INFO] doIli2freeframe: false
-2016-08-31 15:45:23 org.catais.App [INFO] doGeobau: true
-2016-08-31 15:45:23 org.catais.App [INFO] doMopublic: false
-2016-08-31 15:45:23 org.catais.App [INFO] doCommit2Svn: false
-2016-08-31 15:45:23 org.catais.App [INFO] doDeleteFiles: false
-2016-08-31 15:45:23 org.catais.App [INFO] doVacuum: null
-2016-08-31 15:45:23 org.catais.App [INFO] doReindex: null
-2016-08-31 15:45:23 org.catais.App [INFO] doExport: false
-2016-08-31 15:45:23 org.catais.App [INFO] doFusion: false
-2016-08-31 15:45:23 org.catais.App [INFO] doPostprocessing: true
-2016-08-31 15:45:23 org.catais.App [INFO] Start postprocessing...
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] PostProcessing: /Users/stefan/tmp/itf_test/254900-lv95.itf
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_liegenschaft
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_liegenschaft
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grenzpunkt
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grenzpunkt
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grundstueckpos
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grundstueckpos
-2016-08-31 15:45:23 org.catais.postprocessing.PostProcessing [INFO] Postprocessing: 2549 commited.
-2016-08-31 15:45:23 org.catais.App [INFO] End postprocessing.
-2016-08-31 15:45:23 org.catais.App [INFO] Start Geobau...
-2016-08-31 15:45:23 org.catais.geobau.Geobau [INFO] Geobau: 254900-lv95.itf
-2016-08-31 15:45:23 org.catais.geobau.GeobauObj [INFO] /tmp//2549.dxf
-2016-08-31 15:45:23 org.catais.geobau.GeobauObj [INFO] /tmp//lv03_2549.dxf
-2016-08-31 15:45:30 org.catais.geobau.GeobauObj [INFO] Zipping file...
-2016-08-31 15:45:30 org.catais.geobau.GeobauObj [INFO] File zipped: /tmp//2549.zip
-2016-08-31 15:45:30 org.catais.geobau.GeobauObj [INFO] Zipping file...
-2016-08-31 15:45:30 org.catais.geobau.GeobauObj [INFO] File zipped: /tmp//lv03_2549.zip
-2016-08-31 15:45:30 org.catais.geobau.Geobau [INFO] Geobau 254900-lv95.itf finished.
-2016-08-31 15:45:30 org.catais.App [INFO] End Geobau.
+2016-08-31 16:18:29 org.catais.App [INFO] Start: Wed Aug 31 16:18:29 CEST 2016
+2016-08-31 16:18:29 org.catais.App [DEBUG] Properties filename: itf2avdpoolng_lv95.properties
+2016-08-31 16:18:29 org.catais.App [DEBUG] {schema=av_avdpool_ng, doExport=false, doPostprocessing=true, doFusion=false, importModelName=DM01AVSO24LV95, geobauDir=/tmp/, importSourceDir=/Users/stefan/tmp/itf_test/, ili2freeframeDir=/tmp/, host=geodb_brw.verw.rootso.org, doDeleteFiles=false, renumberTid=true, enumText=true, importDestinationDir=/tmp/, mopublicBaseDir=/tmp/mopublic/, doMopublic=false, doImport=true, doIli2ch=false, doGeobau=false, ili2chDir=/tmp/, addAttr=true, dbname=sogis, doIli2freeframe=false, port=5432, doCommit2Svn=false, ili2freeframeModelName=DM01AVSO24, pwd=av_import, user=av_import, ili2chModelName=DM01AVCH24LV95D}
+2016-08-31 16:18:29 org.catais.App [INFO] doImport: true
+2016-08-31 16:18:29 org.catais.App [INFO] doAvwms: null
+2016-08-31 16:18:29 org.catais.App [INFO] doIli2ch: false
+2016-08-31 16:18:29 org.catais.App [INFO] doIli2freeframe: false
+2016-08-31 16:18:29 org.catais.App [INFO] doGeobau: false
+2016-08-31 16:18:29 org.catais.App [INFO] doMopublic: false
+2016-08-31 16:18:29 org.catais.App [INFO] doCommit2Svn: false
+2016-08-31 16:18:29 org.catais.App [INFO] doDeleteFiles: false
+2016-08-31 16:18:29 org.catais.App [INFO] doVacuum: null
+2016-08-31 16:18:29 org.catais.App [INFO] doReindex: null
+2016-08-31 16:18:29 org.catais.App [INFO] doExport: false
+2016-08-31 16:18:29 org.catais.App [INFO] doFusion: false
+2016-08-31 16:18:29 org.catais.App [INFO] doPostprocessing: true
+2016-08-31 16:18:29 org.catais.App [INFO] Start import...
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] inputRepoModelName: DM01AVSO24LV95
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Import Source Directory: /Users/stefan/tmp/itf_test/
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Import destination Directory: /tmp/
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Additional Attributes: true
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Enumeration Text: true
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Renumber TID: true
+2016-08-31 16:18:29 org.catais.importdata.ImportData [DEBUG] Count of itf files: 1
+2016-08-31 16:18:29 org.catais.importdata.ImportData [INFO] Import: /Users/stefan/tmp/itf_test/254900-lv95.itf
+2016-08-31 16:18:29 org.catais.importdata.IliReader [INFO] DM01AVSO24LV95
+2016-08-31 16:18:38 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1nachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1pos
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1symbol
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1nachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1pos
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2nachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2pos
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2symbol
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2nachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2pos
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3nachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3pos
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3symbol
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfpnachfuehrung
+2016-08-31 16:18:39 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunkt
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktpos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktsymbol
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3nachfuehrung
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3pos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_bbnachfuehrung
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaeche
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummer
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummerpos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektname
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektnamepos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaechesymbol
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaeche
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummer
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummerpos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektname
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektnamepos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaechesymbol
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunkt
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunktpos
+2016-08-31 16:18:40 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_eonachfuehrung
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelobjekt
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelement
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelementsymbol
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelement
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelementsymbol
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_punktelement
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektname
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnamepos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummer
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummerpos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunkt
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunktpos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: hoehen_honachfuehrung
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunkt
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunktpos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: hoehen_gelaendekante
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: hoehen_aussparung
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_nknachfuehrung
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurname
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurnamepos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsname
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsnamepos
+2016-08-31 16:18:41 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendename
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendenamepos
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lsnachfuehrung
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunkt
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktpos
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktsymbol
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueck
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueckpos
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib1
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projliegenschaft
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib2
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projselbstrecht
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib3
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projbergwerk
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueck
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueckpos
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib4
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_liegenschaft
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib5
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_selbstrecht
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib6
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_bergwerk
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_rlnachfuehrung
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjekt
+2016-08-31 16:18:42 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjektpos
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_lineattrib7
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_flaechenelement
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_linienelement
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_punktelement
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunkt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunktpos
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunkt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunktpos
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereich
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nbgeometrie
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereichpos
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemnachfuehrung
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunkt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktpos
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktsymbol
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeinde
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_projgemeindegrenze
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_lineattrib8
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeindegrenze
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: bezirksgrenzen_bezirksgrenzabschnitt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: kantonsgrenzen_kantonsgrenzabschnitt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: landesgrenzen_landesgrenzabschnitt
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plan
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plangeometrie
+2016-08-31 16:18:43 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_planpos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufe
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufepos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschungpos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_osnachfuehrung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbund
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbundtext
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaft
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname_pos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6nachfuehrung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebnachfuehrung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisation
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsname
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsnamepos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_benanntesgebiet
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_strassenstueck
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudeeingang
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_hausnummerpos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudename
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudenamepos
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudebeschreibung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayout
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftung
+2016-08-31 16:18:44 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftungpos
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschrift
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschriftpos
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_linienobjekt
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenlinie
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_darstellungsflaeche
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayoutsymbol
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_netzkreuz
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie2.LFP2Nachfuehrung
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie2.LFP2
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie2.LFP2Pos
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie2.LFP2Symbol
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie2.LFP2Nachfuehrung
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie3.LFP3Nachfuehrung
+2016-08-31 16:18:45 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie3.LFP3
+2016-08-31 16:18:46 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie3.LFP3Pos
+2016-08-31 16:18:46 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie3.LFP3Symbol
+2016-08-31 16:18:46 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.FixpunkteKategorie3.LFP3Nachfuehrung
+2016-08-31 16:18:46 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.BBNachfuehrung
+2016-08-31 16:18:46 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.BoFlaeche
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.Gebaeudenummer
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.Objektname
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.ObjektnamePos
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.BoFlaecheSymbol
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bodenbedeckung.BBNachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.EONachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.Einzelobjekt
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.EONachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.Flaechenelement
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.Linienelement
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Einzelobjekte.Flaechenelement
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.NKNachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.Flurname
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.FlurnamePos
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.NKNachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.Ortsname
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.OrtsnamePos
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nomenklatur.Ortsname
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.LSNachfuehrung
+2016-08-31 16:18:47 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.Grenzpunkt
+2016-08-31 16:18:48 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.GrenzpunktSymbol
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.Grundstueck
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.GrundstueckPos
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.Liegenschaft
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nummerierungsbereiche.Nummerierungsbereich
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Liegenschaften.LSNachfuehrung
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nummerierungsbereiche.NBGeometrie
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nummerierungsbereiche.NummerierungsbereichPos
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Nummerierungsbereiche.NBGeometrie
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.GEMNachfuehrung
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.Hoheitsgrenzpunkt
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.HoheitsgrenzpunktPos
+2016-08-31 16:18:49 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.Gemeinde
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.Gemeindegrenze
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Bezirksgrenzen.Bezirksgrenzabschnitt
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Kantonsgrenzen.Kantonsgrenzabschnitt
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planeinteilungen.Plan
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planeinteilungen.Plangeometrie
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planeinteilungen.PlanPos
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.TSEinteilung.Toleranzstufe
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gemeindegrenzen.GEMNachfuehrung
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.GEBNachfuehrung
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.Lokalisation
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.LokalisationsName
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.LokalisationsNamePos
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.GEBNachfuehrung
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.BenanntesGebiet
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.Strassenstueck
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.Gebaeudeeingang
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.HausnummerPos
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planrahmen.PlanLayout
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planrahmen.Planbeschriftung
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planrahmen.PlanbeschriftungPos
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planrahmen.Linienobjekt
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Gebaeudeadressen.BenanntesGebiet
+2016-08-31 16:18:50 org.catais.importdata.IliReader [INFO] Add features: DM01AVSO24LV95.Planrahmen.Darstellungsflaeche
+2016-08-31 16:18:50 org.catais.importdata.ImportData [INFO] Copying file...
+2016-08-31 16:18:50 org.catais.importdata.ImportData [INFO] File copied: /tmp/254900-lv95.itf
+2016-08-31 16:18:50 org.catais.importdata.ImportData [INFO] Zipping file...
+2016-08-31 16:18:51 org.catais.importdata.ImportData [INFO] File zipped: /tmp//254900.zip
+2016-08-31 16:18:51 org.catais.importdata.ImportData [INFO] Import done: 254900-lv95.itf
+2016-08-31 16:18:51 org.catais.App [INFO] Filelist with errors: []
+2016-08-31 16:18:51 org.catais.App [INFO] End import.
+2016-08-31 16:18:51 org.catais.App [INFO] Start postprocessing...
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] PostProcessing: /Users/stefan/tmp/itf_test/254900-lv95.itf
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_liegenschaft
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_liegenschaft
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grenzpunkt
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grenzpunkt
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grundstueckpos
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] t_liegenschaften_grundstueckpos
+2016-08-31 16:18:51 org.catais.postprocessing.PostProcessing [INFO] Postprocessing: 2549 commited.
+2016-08-31 16:18:51 org.catais.App [INFO] End postprocessing.
