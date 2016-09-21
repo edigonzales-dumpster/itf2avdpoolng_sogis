@@ -52,7 +52,7 @@ public class ExportMopublic {
 //    				mopublic = new MOpublic(params);
 					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV95");
 
-//    				mopublic = new MOpublic(params);
+    				mopublic = new MOpublic(params);
 					mopublic.write(f.substring(0, 4), "d", topics, "shp", "LV03");
 //
 //    				mopublic = new MOpublic(params);
