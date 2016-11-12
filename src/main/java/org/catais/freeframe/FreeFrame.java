@@ -260,7 +260,9 @@ public class FreeFrame {
     				AffineTransformationBuilder builder = new AffineTransformationBuilder(t1[0], t1[1], t1[2], t2[0], t2[1], t2[2]);
     				builder.getTransformation().transform(coord, coordTransformed);
     				// Achtung Komma statt Punkt? Funktioniert wieder mal nicht in SO!GIS-Infrastruktur.
-    				DecimalFormat decimalForm = new DecimalFormat("#,###");
+//    				DecimalFormat decimalForm = new DecimalFormat("#,###");
+    				// Bravo... Ist abhängig von Locale des Server. Kann gesteuert werden über JVM ("-D")
+    				DecimalFormat decimalForm = new DecimalFormat("#.###");
     				Coordinate coordTransRound = new Coordinate(Double.valueOf(decimalForm.format(coordTransformed.x)), Double.valueOf(decimalForm.format(coordTransformed.y)));
     				return coordTransRound;
         			
