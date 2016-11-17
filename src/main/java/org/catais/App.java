@@ -247,9 +247,7 @@ public class App
 				}
 				logger.info("End Mopublic.");
 			}
-			
-            System.exit(0);
-			
+						
 			// Commit to svn
 			if (doCommit2Svn == true) {
 				logger.info("Start commiting to svn...");
